@@ -1,10 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 body {
-    font-family: monospace;
-    background-color: rgb(255, 166, 0);
+    font-family: "Public Sans", sans-serif;
+    background-color: rgb(193, 182, 182);
 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+#Card {
+    width: 20rem;
+    aspect-ratio: 1.4;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #7774;
+    box-shadow: 0.5rem 0.5rem 1rem #003;
+}
+#Strategy {
+    margin: 0
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+}
+button {
+margin-top: 2rem;
+padding: 0.5em 1em;
+opacity: 0.2;
+}
+button:hover {
+    opacity: 1;
 }
