@@ -11,6 +11,51 @@
     <h1 id="Strategy">Hello</h1>
         </div>
 <button onclick ="window.location.reload();">⌘R</button>
+
+
+
+
+
+
+<img id="bkgImg">
+
+<style>
+    #bkgImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+
+<script>
+
+    let mesImages = [
+        "Colombus_Isle.jpg",
+        "great_cocktails.jpg.webp"
+    ];
+
+
+    let theImage = document.getElementById("bkgImg");
+    let imagesTotal = mesImages.length;
+    let imagesRando = Math.random();
+    let imagesHasar = imagesRando*imagesTotal;
+    let imagesChoix = Math.floor(imagesHasar);
+    theImage.src = mesImages[imagesChoix];
+
+</script>
+
+
+
+
+
+
+
+
+
     <script>
       var strategy = document.getElementById ("Strategy");
 
@@ -33,6 +78,8 @@ let hasar = rando * total;
 let choix = Math.floor( hasar );
 
 strategy.innerHTML = Strategies[ choix ];
+
+
 
 //if ( Math.random() > 0.5){
 //strategy.innerHTML = "Obey.";
