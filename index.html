@@ -7,64 +7,67 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="Card">
-    <h1 id="Strategy">Hello</h1>
-        </div>
-<button onclick ="window.location.reload();">⌘R</button>
+    <p class="hint">Click the card if you've run out of ideas</p>
 
+    <div id="Card" onclick="changeStrategy()">
+        <h1 id="Strategy"></h1>
+    </div>
+    </h1>
+   <div id="SearchContainer">
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="SEARCH SOMETHING SMART" id="SearchInput">
+        <button type="submit" id="SearchBtn">GO</button>
+    </form>
+</div> 
+</div>
 
-
-
-
-
-<img id="bkgImg">
 
 <style>
-    #bkgImg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+
 </style>
 
 <script>
-
-    let mesImages = [
-        "Colombus_Isle.jpg",
-        "great_cocktails.jpg.webp"
-    ];
-
-
-    let theImage = document.getElementById("bkgImg");
-    let imagesTotal = mesImages.length;
-    let imagesRando = Math.random();
-    let imagesHasar = imagesRando*imagesTotal;
-    let imagesChoix = Math.floor(imagesHasar);
-    theImage.src = mesImages[imagesChoix];
-
+const strategyElement = document.getElementById("Strategy");
+function changeStrategy() {
+    const randomIndex = Math.floor(Math.random() * Strategies.length);
+    const newText = Strategies[randomIndex];
+    strategyElement.textContent = newText;
+}
 </script>
-
-
-
-
-
-
-
-
-
     <script>
       var strategy = document.getElementById ("Strategy");
 
 const Strategies = [
-    "Always first steps", 
-    "Ask your body",
-    "Don’t be afraid of things because they’re easy to do",
-    "Courage!",
-    "Go to an extreme, move back to a more comfortable place"
+    "Go outside and breathe in the air.", 
+    "Start from the beginning.",
+    "Take a white sheet.",
+    "Pause for 10 minutes.",
+    "Close your eyes for a while.",
+    "Write your ideas on a post-it note.",
+    "Show your project to someone.",
+    "Do the opposite.",
+    "Make everything black and white.",
+    "Use only one font.",
+    "Make it simple.",
+    "Make a new file.",
+    "Do it over-complicated.",
+    "Change the format.",
+    "Start with one word.",
+    "Imagine you have 5 minutes to finish it.",
+    "Limit yourself.",
+    "Start again.",
+    "Make it differently.",
+    "Draw something.",
+    "Stop your perfectionism.",
+    "Good is enough.",
+    "You are not dumb.",
+    "Do it in the morning.",
+    "If you can't do it, someone will.",
+    "Shit, I believe in you.",
+    "Take an art book right now!",
+    "If you don't do it, someone else will",
+    "You're too talented to be this stressed.",
+    "They wish they had your brain.",
 ];
 
 let total = Strategies.length;

@@ -3,8 +3,7 @@
 
 body {
     font-family: "Public Sans", sans-serif;
-    background-color: rgb(193, 182, 182);
-
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -12,25 +11,80 @@ body {
     align-items: center;
 }
 #Card {
-    width: 20rem;
-    aspect-ratio: 1.4;
-    border-radius: 0.6rem;
+    width: 40rem;
+    aspect-ratio: 1.5;
+    border-radius: 4rem;
     padding: 1rem;
-    background-color: white;
-    border: 1px solid #7774;
-    box-shadow: 0.5rem 0.5rem 1rem #003;
-}
+    background-color: rgb(19, 0, 161);
+    display: flex;
+  flex-direction: column;   
+  justify-content: center; 
+  align-items: center;   
+  text-align: center;
+
 #Strategy {
-    margin: 0
-    font-size: 1.5rem;
-    font-weight: 400;
-    line-height: 1.2;
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255)
 }
 button {
 margin-top: 2rem;
 padding: 0.5em 1em;
 opacity: 0.2;
 }
+}
 button:hover {
-    opacity: 1;
+    opacity: 1; 
+}
+.hint {
+    font-family: "Public Sans", sans-serif;
+    color: rgb(19, 0, 161); 
+    font-size: 1.5rem;
+    margin-bottom: 1rem; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    font-weight: 700;
+    }
+    #SearchContainer {
+    margin-top: 2rem; 
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    justify-content: center;
+}
+
+#SearchInput {
+    padding: 1rem 1.5rem;
+    width: 300px;
+    border: 2px solid #ddd;
+    border-radius: 2rem 0 0 2rem; 
+    outline: none;
+    font-family: "Public Sans", sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+#SearchInput:focus {
+    border-color: #000;
+}
+
+#SearchBtn {
+    padding: 1rem 1.5rem;
+    background-color: rgb(19, 0, 161); ;
+    color: #ffffff;
+    border: none;
+    border-radius: 0 2rem 2rem 0; 
+    cursor: pointer;
+    font-family: "Public Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+#SearchBtn:hover {
+    background-color: #000000;
 }
